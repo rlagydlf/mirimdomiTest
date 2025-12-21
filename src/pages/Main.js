@@ -297,7 +297,7 @@ const fetchTimetable = async (grade, classNum, date) => {
     // 날짜 : YYYYMMDD
     const dateStr = date.replace(/\./g, '').replace(/\s/g, '');
 
-    const apiKey = process.env.REACT_APP_NEIS_API_KEY || 'f5d5771e4c464ba287816eb498ff3999';
+    const apiKey = process.env.REACT_APP_NEIS_API_KEY;
     
     if (!apiKey) {
       console.error('NEIS API 키가 설정되지 않았습니다.');
@@ -433,7 +433,7 @@ const fetchTimetable = async (grade, classNum, date) => {
 
   // NEIS API 직접 호출 (급식) - 사용자 제공 형식
   const getMealInfo = async (dateData) => {
-    const API_KEY = process.env.REACT_APP_NEIS_API_KEY || 'f5d5771e4c464ba287816eb498ff3999';
+    const API_KEY = process.env.REACT_APP_NEIS_API_KEY;
     
     if (!API_KEY) {
       console.error('NEIS API 키가 설정되지 않았습니다.');
